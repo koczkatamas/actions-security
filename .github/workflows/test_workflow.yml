@@ -5,8 +5,11 @@ on:
     types: [labeled]
   pull_request_target:
     types: [labeled, synchronize]
-steps:
-  - name: Echo context object
-    run: echo ${{ toJson(github) }}
-  - name: Run run.sh
-    run: ./run.sh
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo context object
+        run: echo ${{ toJson(github) }}
+      - name: Run run.sh
+        run: ./run.sh
