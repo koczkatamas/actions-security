@@ -10,6 +10,8 @@ jobs:
   test-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Showing secrets
+        run: echo '${{ secrets.POPRDI_SECRET_ACTIONS }}'
       - name: Echo environment variables
         run: env
       - name: Echo context object
