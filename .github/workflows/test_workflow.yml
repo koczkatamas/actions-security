@@ -4,8 +4,8 @@ on:
     - cron: '0,10,20,30,40,50 * * * *'
   pull_request:
     types: [labeled]
-  pull_request_target:
-    types: [labeled, synchronize]
+  # pull_request_target:
+  #   types: [labeled, synchronize]
 jobs:
   test-job:
     runs-on: ubuntu-latest
