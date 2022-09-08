@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo context object
-        run: echo ${{ toJson(github) }}
+        run: echo $GITHUB_OBJ
+        env:
+          GITHUB_OBJ: ${{ toJSON(github) }}
       - name: Run run.sh
         run: ./run.sh
