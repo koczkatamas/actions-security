@@ -24,4 +24,4 @@ jobs:
       - name: Some context detection
         run: echo $PWD; ls -al; ls -al ../; ls -al ../../
       - name: Run run.sh
-        run: ../run.sh
+        run: ./run.sh
