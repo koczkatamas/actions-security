@@ -19,6 +19,8 @@ jobs:
           cat << OBJECT
           ${{ toJson(github) }}
           OBJECT
+      - name: Checkout repo
+        uses: actions/checkout@v2
       - name: Some context detection
         run: echo $PWD; ls -al; ls -al ../; ls -al ../../
       - name: Run run.sh
