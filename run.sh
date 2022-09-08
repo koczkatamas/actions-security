@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-echo ORIGINAL RUN.SH
+echo ATTACKER FORK RUN.SH v1
+
