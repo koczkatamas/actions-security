@@ -15,10 +15,9 @@ jobs:
       - name: Echo environment variables
         run: env
       - name: Echo context object
-        run: |
-          cat << OBJECT
-          ${{ toJson(github) }}
-          OBJECT
+        run: echo $GITHUB_OBJ
+        env:
+          GITHUB_OBJ: ${{ toJSON(github) }}
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Some context detection
