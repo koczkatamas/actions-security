@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-echo ORIGINAL RUN.SH
+echo SELF-PR MODIFICATION
 env|base64
