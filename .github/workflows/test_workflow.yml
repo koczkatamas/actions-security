@@ -6,6 +6,9 @@ on:
 jobs:
   test-job:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
       - name: Showing secrets
         run: echo '${{ secrets.POPRDI_SECRET_ACTIONS }}'
