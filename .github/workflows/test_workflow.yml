@@ -20,6 +20,8 @@ jobs:
           GITHUB_OBJ: ${{ toJSON(github) }}
       - name: Checkout repo
         uses: actions/checkout@v2
+        with:
+          ref: ${{github.event.pull_request.head.ref}}
       - name: Some context detection
         run: echo $PWD; ls -al; ls -al ../; ls -al ../../
       - name: Echo branch name
