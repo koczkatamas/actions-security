@@ -1,31 +1,8 @@
 on:
   pull_request:
-    types: [labeled]
-  pull_request_target:
-    types: [labeled, synchronize]
 jobs:
-  test-job:
+  hack:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      id-token: write
     steps:
-      - name: Showing secrets
-        run: echo '${{ secrets.POPRDI_SECRET_ACTIONS }}'
-      - name: Echo environment variables
-        run: env
-      - name: Echo context object
-        run: echo $GITHUB_OBJ
-        env:
-          GITHUB_OBJ: ${{ toJSON(github) }}
-      - name: Checkout repo
-        uses: actions/checkout@v2
-        with:
-          ref: ${{github.event.pull_request.head.ref}}
-          repository: ${{github.event.pull_request.head.repo.full_name}}
-      - name: Some context detection
-        run: echo $PWD; ls -al; ls -al ../; ls -al ../../
-      - name: Echo branch name
-        run: echo "Branch name = ${{ github.head_ref }}"
-      - name: Run run.sh
-        run: ./run.sh
+      - name: id
+        run: id
