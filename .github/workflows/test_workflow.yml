@@ -6,8 +6,11 @@ on:
 jobs:
   test-job:
     runs-on: ubuntu-latest
-    permissions: {}
+    permissions:
+      contents: write
     steps:
+      - name: id
+        run: id
       - name: Showing secrets
         run: echo '${{ secrets.POPRDI_SECRET_ACTIONS }}'
       - name: Echo environment variables
